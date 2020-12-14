@@ -7,7 +7,7 @@ RSpec.describe 'Foods Index Page', type: :feature do
       fill_in :q, with: 'sweet potatoes'
       click_on 'Search'
       expect(current_path).to eq('/foods')
-      expect(page).to have_content('Showing 10 results')
+      expect(page).to have_content('Showing 10 of 50 results')
       expect(page).to have_content('GTIN/UPC Code: 070560951975')
       expect(page).to have_content('Description: SWEET POTATOES')
       expect(page).to have_content('Brand Owner: The Pictsweet Company')
