@@ -1,0 +1,14 @@
+<h1>Foods with search description: <%= @foods[:foodSearchCriteria][:query] %></h1>
+<p>Total Results: <%= @foods[:totalHits] %></p>
+<% @foods[:foods][0..9].each do |food| %>
+  <p>GTIN/UPC Code: <%= food[:gtinUpc] %></p>
+  <p>Description: <%= food[:description] %></p>
+  <p>Brand Owner: <%= food[:brandOwner] %></p>
+  <p>Ingredients:</p>
+  <% food[:foodNutrients].each do |ingredient| %>
+    <ul>
+    <li><%= ingredient[:nutrientName] %></li>
+    </ul>
+    <% end %>
+    <hr>
+<% end %>
