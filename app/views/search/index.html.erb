@@ -1,0 +1,10 @@
+<h1>Showing Results for "<%= params[:q] %>"</h1>
+<p>Showing 10 of <%= @foods.count %> results</p>
+<br><br>
+<% @foods[0..9].each do |food| %>
+  <p>GTIN/UPC Code: <%= food.code %></p>
+  <p>Description: <%= food.description %></p>
+  <p>Brand Owner: <%= food.brand %></p>
+  <p>Ingredients: <%= food.ingredients %></p>
+  <hr>
+<% end %>
