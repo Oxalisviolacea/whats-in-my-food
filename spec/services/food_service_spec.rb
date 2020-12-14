@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 describe FoodService do
-  context "instance methods" do
-    context "#search for ingredient" do
-      it "returns foods that include that ingredient" do
-        search = FoodService.search_for_("sweet potatoes")
+  context 'instance methods' do
+    context '#search for ingredient' do
+      it 'returns foods that include that ingredient' do
+        search = FoodService.search_for_('sweet potatoes')
         expect(search).to be_a Hash
         expect(search[:foods]).to be_an Array
         food_data = search[:foods].first
